@@ -142,8 +142,8 @@ body
 .history
 {
     position: absolute;
-    top: 5%;
-    bottom: 5%;
+    top: 0;
+    bottom: 0;
     right: 0;
     width: 0;
     background-color: #333;
@@ -160,6 +160,7 @@ body
     text-align: right;
     font-size: 1.1rem;
     color: #777;
+    cursor: pointer;
 }
 .history-div
 {
@@ -169,6 +170,19 @@ body
     padding: 1rem;
     line-height: 30px;
     letter-spacing: 2px;
+}
+.history-header
+{
+    display: flex;
+    justify-content: space-between;
+}
+.history-header h2
+{
+    padding: 0.5rem;
+    color:#777777;
+    font-size: 1.7rem;
+    margin-left: 1rem;
+    text-decoration: underline;
 }
 .section
 {
