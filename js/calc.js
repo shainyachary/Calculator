@@ -31,7 +31,7 @@ function showHistory()
     historyDiv.innerHTML = '';
     for(let i=0;i<answers.length;i++)
     {
-        historyDiv.innerHTML += '<div class="section"><h4>'+equations[i]+'</h4><h2>'+answers[i]+'</h2></div>';
+        historyDiv.innerHTML += '<div class="section"><h3>'+equations[i]+'</h3><h1>'+answers[i]+'</h1></div>';
     }
 }
 function removeHistory()
