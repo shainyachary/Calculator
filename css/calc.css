@@ -38,6 +38,7 @@ body
     height: 60px;
     width: 100%;
     border-top: none;
+    color: black;
     background: #a7af7c;
     margin-bottom: 10px;
     text-align: right;
@@ -53,6 +54,7 @@ body
     border-bottom: none;
     height: 40px;
     width: 100%;
+    color: black;
     background: #a7af7c;
     text-align: right;
     padding-right: 4px;
