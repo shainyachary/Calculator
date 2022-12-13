@@ -14,7 +14,8 @@
             <input type="text" class="equat" readonly>
             <input type="text" class="value" value="0">
             <span class="num clear" onclick="clearInput()"><i>C</i></span>
-            <span class="num btn-history" onclick="showHistory()"><i>H</i></span>
+            <span class="num"><i class="fas fa-angle-double-left"></i></span>
+            <span class="num btn-history" onclick="showHistory()"><i class="fas fa-history"></i></span>
             <span class="num" onclick="selectValue('/')"><i>/</i></span>
             <span class="num" onclick="selectValue('7')"><i>7</i></span>
             <span class="num" onclick="selectValue('8')"><i>8</i></span>
@@ -36,6 +37,7 @@
     </div>
     <div class="history">
         <div class="history-header">
+            <div class="btn-close" onclick="closeHistory()"><i class="fas fa-times"></i></div>
             <h2>History</h2>
             <div class="btn-remove" onclick="removeHistory()"><i class="fas fa-trash-alt"></i></div>
         </div>

@@ -27,7 +27,8 @@ function getAns()
 
 function showHistory()
 {
-    history.classList.toggle('open');
+    document.querySelector('.history').style.display = "block";
+    document.querySelector('.container').style.display = "none";
     historyDiv.innerHTML = '';
     for(let i=0;i<answers.length;i++)
     {
@@ -43,4 +44,9 @@ function removeHistory()
         answers = [];
         equations = [];
     }
+}
+function closeHistory()
+{
+    document.querySelector('.history').style.display = "none";
+    document.querySelector('.container').style.display = "block";
 }
