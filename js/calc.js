@@ -16,6 +16,13 @@ function clearInput()
     inputEq.value = '';
     inputBox.value=0;
 }
+function deleteValue()
+{
+    var number = document.querySelector('.value');
+    var remove = num.value;
+    remove = remove.slice(0,-1);
+    number.value = remove;
+}
 function getAns()
 {
     equation = inputBox.value + "=";
