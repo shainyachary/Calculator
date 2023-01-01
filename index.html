@@ -4,45 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALCULATOR</title>
-    <link rel="stylesheet" href="css/calc.css">
+    <title>Calculator</title>
+    <!-- fontawesome icons -->
     <script src="https://kit.fontawesome.com/ccd306c63a.js" crossorigin="anonymous"></script>
+    <!-- css file -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <form class="calculator" name="calc">
-            <input type="text" class="equat" readonly>
-            <input type="text" class="value" value="0">
-            <span class="num clear" onclick="clearInput()"><i>C</i></span>
-            <span class="num" onclick="deleteValue()"><i class="fas fa-angle-double-left"></i></span>
-            <span class="num btn-history" onclick="showHistory()"><i class="fas fa-history"></i></span>
-            <span class="num" onclick="selectValue('/')"><i>/</i></span>
-            <span class="num" onclick="selectValue('7')"><i>7</i></span>
-            <span class="num" onclick="selectValue('8')"><i>8</i></span>
-            <span class="num" onclick="selectValue('9')"><i>9</i></span>
-            <span class="num" onclick="selectValue('*')"><i>*</i></span>
-            <span class="num" onclick="selectValue('4')"><i>4</i></span>
-            <span class="num" onclick="selectValue('5')"><i>5</i></span>
-            <span class="num" onclick="selectValue('6')"><i>6</i></span>
-            <span class="num" onclick="selectValue('-')"><i>-</i></span>
-            <span class="num" onclick="selectValue('1')"><i>1</i></span>
-            <span class="num" onclick="selectValue('2')"><i>2</i></span>
-            <span class="num" onclick="selectValue('3')"><i>3</i></span>
-            <span class="num plus" onclick="selectValue('+')"><i>+</i></span>
-            <span class="num" onclick="selectValue('0')"><i>0</i></span>
-            <span class="num" onclick="selectValue('00')"><i>00</i></span>
-            <span class="num" onclick="selectValue('.')"><i>.</i></span>
-            <span class="num equal" onclick="getAns()"><i>=</i></span>
-        </form>
-    </div>
-    <div class="history">
-        <div class="history-header">
-            <div class="btn-close" onclick="closeHistory()"><i class="fas fa-times"></i></div>
-            <h2>History</h2>
-            <div class="btn-remove" onclick="removeHistory()"><i class="fas fa-trash-alt"></i></div>
+        <div class="icon">
+            <i class="fas fa-ellipsis-h" onclick="showHistory()"></i>
         </div>
-        <div class="history-div"></div>
+        <div class="calc">
+            <input type="text" class="inputEq" readonly>
+            <input type="text" class="inputBox" id="input" value="0" onkeypress="getNum()"><br>
+        </div> 
+
+        <div class="buttons">
+            <button class="btn op" onclick="clearInput()">C</button>
+            <button class="btn op" onclick="setVal('%')">%</button>
+            <button class="btn op" id="back-button"><i class="fas fa-backspace"></i></button>
+            <button class="btn op" onclick="setVal('/')">/</button>
+
+            <button class="btn" onclick="setVal('7')">7</button>
+            <button class="btn" onclick="setVal('8')">8</button>
+            <button class="btn" onclick="setVal('9')">9</button>
+            <button class="btn op" onclick="setVal('*')">x</button>
+
+            <button class="btn" onclick="setVal('4')">4</button>
+            <button class="btn" onclick="setVal('5')">5</button>
+            <button class="btn" onclick="setVal('6')">6</button>
+            <button class="btn op" onclick="setVal('-')">-</button>
+
+            <button class="btn" onclick="setVal('1')">1</button>
+            <button class="btn" onclick="setVal('2')">2</button>
+            <button class="btn" onclick="setVal('3')">3</button>
+            <button class="btn op" onclick="setVal('+')">+</button>
+
+            <button class="btn" onclick="setVal('0')">00</button>
+            <button class="btn" onclick="setVal('0')">0</button>
+            <button class="btn" onclick="setVal('.')">.</button>
+            <button class="btn eq" onclick="getAns()">=</button>
+        </div>
+        <div class="history">
+            <div class="icons">
+                <i class="fas fa-trash" onclick="removeHistory()"></i>
+                <div class="history-div"></div>
+            </div>
+        </div>
     </div>
-    <script src="js/calc.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
